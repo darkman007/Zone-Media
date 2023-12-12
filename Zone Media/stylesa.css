@@ -1,0 +1,194 @@
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.portfolio .box-container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 990px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.main-video, .video-playlist {
+    width: 100%;
+    height: 30rem;
+}
+
+.main-video .title {
+    margin-top: 1rem;
+}
+
+.video-playlist .title {
+    padding-left: 1rem;
+}
+
+.video-playlist > p {
+    padding: 1rem;
+    color: var(--secondary);
+}
+
+.video-playlist .videos{
+    height: 70%;
+    overflow-y: auto;
+}
+
+.video-playlist .videos::-webkit-scrollbar {
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #0005;
+}
+
+.video-playlist .videos::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: #fff;
+}
+
+.video-playlist .videos .video {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 1rem;
+    margin-top: .1rem;
+    cursor: pointer;
+
+    border-radius: .5rem;
+}
+
+.video-playlist .videos .video:hover {
+    background-color: #0003;
+}
+
+.video-playlist .videos .video.active {
+    background-color: #0003;
+    color: var(--secondary);
+}
+
+.main-video video {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.video img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    filter: invert(100%);
+}
+
+.video-playlist .videos .video.active img {
+    filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+}
+
+.video p {
+   margin-left: 2.5rem;
+}
+
+.video h3 {
+    width: 23rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font: 100 1rem sans-serif;
+    padding: 0 .5rem;
+}
+
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+ 
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
